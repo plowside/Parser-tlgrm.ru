@@ -99,7 +99,8 @@ class nigga_pars:
                 if not isinstance(dict_list_objs, list):
                     continue
                 for dict_objs in dict_list_objs:
-                    results.append(f"{('t.me/' if 't.me/' not in dict_objs['link'] else '')+dict_objs['link']};{category}")
+                    if dict_objs.get('subscribers', 0) >= FILTERS['subscribers_minimum_count']:
+                        results.append(f"{('t.me/' if 't.me/' not in dict_objs['link'] else '')+dict_objs['link']};{category}")
 
         return results, category
 

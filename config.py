@@ -6,6 +6,10 @@ PROXY = {
     'proxy': 'us.arxlabs.io:3010:k9tv104364-region-US:eqv79atl' # Если статичные в .txt, то указываешь .txt, а если резидентные, то просто сам прокси в одном из форматов вписываешь: ip:port:user:pass | user:pass@ip:port | ip:port
 }
 
+FILTERS = {
+    "subscribers_minimum_count": 500 # Минимальное количество подписчиков (включительно)
+}
+
 SAVE_FORMATS = {
     'rewrite': True, # Удалять все предыдущие записи в .txt, если существуют
 
